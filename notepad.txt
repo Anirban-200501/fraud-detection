@@ -1,0 +1,2535 @@
+
+<!-- AI Fraud Overview Cards -->
+        <section class="overview-section">
+            <div class="section-header">
+                <h2>AI Fraud Overview</h2>
+                <div class="time-filter">
+                    <button class="filter-btn active">24h</button>
+                    <button class="filter-btn">7d</button>
+                    <button class="filter-btn">30d</button>
+                    <button class="filter-btn">90d</button>
+                </div>
+            </div>
+            
+            <div class="overview-cards">
+                <div class="overview-card">
+                    <div class="card-icon blue">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-label">Total Transactions</span>
+                        <span class="card-value" data-value="847293">0</span>
+                        <div class="card-trend positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>12.5%</span>
+                        </div>
+                    </div>
+                    <div class="card-chart">
+                        <canvas id="miniChart1"></canvas>
+                    </div>
+                </div>
+                
+                <div class="overview-card">
+                    <div class="card-icon orange">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-label">Fraud Detected</span>
+                        <span class="card-value" data-value="1847">0</span>
+                        <div class="card-trend negative">
+                            <i class="fas fa-arrow-down"></i>
+                            <span>8.3%</span>
+                        </div>
+                    </div>
+                    <div class="card-chart">
+                        <canvas id="miniChart2"></canvas>
+                    </div>
+                </div>
+                
+                <div class="overview-card">
+                    <div class="card-icon green">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-label">Blocked Amount</span>
+                        <span class="card-value currency">₹<span data-value="24.7">0</span>Cr</span>
+                        <div class="card-trend positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>23.1%</span>
+                        </div>
+                    </div>
+                    <div class="card-chart">
+                        <canvas id="miniChart3"></canvas>
+                    </div>
+                </div>
+                
+                <div class="overview-card">
+                    <div class="card-icon purple">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-label">Risk Score Avg</span>
+                        <span class="card-value" data-value="23">0</span>
+                        <div class="card-trend neutral">
+                            <i class="fas fa-minus"></i>
+                            <span>0.2%</span>
+                        </div>
+                    </div>
+                    <div class="risk-gauge">
+                        <svg viewBox="0 0 100 50">
+                            <path class="gauge-bg" d="M10,50 A40,40 0 0,1 90,50" />
+                            <path class="gauge-fill" d="M10,50 A40,40 0 0,1 90,50" />
+                            <circle class="gauge-dot" cx="10" cy="50" r="4" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <i class="fas fa-bolt"></i>
+                        <span>AI-Powered Protection</span>
+                    </div>
+                    <h1>Real-Time <span class="gradient-text">Fraud Detection</span> for Digital Banking</h1>
+                    <p>Protect your UPI and digital transactions with our advanced AI engine. Detecting threats in milliseconds with 99.7% accuracy.</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-value" data-value="2.4">0</span>
+                            <span class="stat-suffix">M+</span>
+                            <span class="stat-label">Transactions Protected</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value" data-value="99.7">0</span>
+                            <span class="stat-suffix">%</span>
+                            <span class="stat-label">Detection Accuracy</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value" data-value="12">0</span>
+                            <span class="stat-suffix">ms</span>
+                            <span class="stat-label">Avg Response Time</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="ai-brain">
+                        <div class="brain-core"></div>
+                        <div class="brain-ring ring-1"></div>
+                        <div class="brain-ring ring-2"></div>
+                        <div class="brain-ring ring-3"></div>
+                        <div class="data-node node-1"><i class="fas fa-credit-card"></i></div>
+                        <div class="data-node node-2"><i class="fas fa-mobile-alt"></i></div>
+                        <div class="data-node node-3"><i class="fas fa-fingerprint"></i></div>
+                        <div class="data-node node-4"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="data-node node-5"><i class="fas fa-clock"></i></div>
+                        <div class="data-node node-6"><i class="fas fa-user-shield"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- Transaction Monitoring & Risk Analytics -->
+        <section class="analytics-section">
+            <div class="analytics-grid">
+                <!-- Main Chart -->
+                <div class="chart-card main-chart">
+                    <div class="card-header">
+                        <h3>Transaction Monitoring</h3>
+                        <div class="chart-legend">
+                            <span class="legend-item"><span class="dot blue"></span>Legitimate</span>
+                            <span class="legend-item"><span class="dot orange"></span>Suspicious</span>
+                            <span class="legend-item"><span class="dot red"></span>Blocked</span>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="transactionChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Fraud Types Donut -->
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h3>Fraud Categories</h3>
+                        <button class="more-btn"><i class="fas fa-ellipsis-h"></i></button>
+                    </div>
+                    <div class="chart-container donut-container">
+                        <canvas id="fraudTypesChart"></canvas>
+                        <div class="donut-center">
+                            <span class="donut-value">1,847</span>
+                            <span class="donut-label">Total Cases</span>
+                        </div>
+                    </div>
+                    <div class="fraud-type-list">
+                        <div class="fraud-type-item">
+                            <span class="type-color" style="background: #ff6b35;"></span>
+                            <span class="type-name">Account Takeover</span>
+                            <span class="type-value">34%</span>
+                        </div>
+                        <div class="fraud-type-item">
+                            <span class="type-color" style="background: #3b82f6;"></span>
+                            <span class="type-name">Phishing</span>
+                            <span class="type-value">28%</span>
+                        </div>
+                        <div class="fraud-type-item">
+                            <span class="type-color" style="background: #10b981;"></span>
+                            <span class="type-name">SIM Swap</span>
+                            <span class="type-value">22%</span>
+                        </div>
+                        <div class="fraud-type-item">
+                            <span class="type-color" style="background: #8b5cf6;"></span>
+                            <span class="type-name">Synthetic ID</span>
+                            <span class="type-value">16%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Risk Timeline -->
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h3>Risk Timeline</h3>
+                        <button class="more-btn"><i class="fas fa-ellipsis-h"></i></button>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="riskTimelineChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <i class="fas fa-bolt"></i>
+                        <span>AI-Powered Protection</span>
+                    </div>
+                    <h1>Real-Time <span class="gradient-text">Fraud Detection</span> for Digital Banking</h1>
+                    <p>Protect your UPI and digital transactions with our advanced AI engine. Detecting threats in milliseconds with 99.7% accuracy.</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-value" data-value="2.4">0</span>
+                            <span class="stat-suffix">M+</span>
+                            <span class="stat-label">Transactions Protected</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value" data-value="99.7">0</span>
+                            <span class="stat-suffix">%</span>
+                            <span class="stat-label">Detection Accuracy</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value" data-value="12">0</span>
+                            <span class="stat-suffix">ms</span>
+                            <span class="stat-label">Avg Response Time</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="ai-brain">
+                        <div class="brain-core"></div>
+                        <div class="brain-ring ring-1"></div>
+                        <div class="brain-ring ring-2"></div>
+                        <div class="brain-ring ring-3"></div>
+                        <div class="data-node node-1"><i class="fas fa-credit-card"></i></div>
+                        <div class="data-node node-2"><i class="fas fa-mobile-alt"></i></div>
+                        <div class="data-node node-3"><i class="fas fa-fingerprint"></i></div>
+                        <div class="data-node node-4"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="data-node node-5"><i class="fas fa-clock"></i></div>
+                        <div class="data-node node-6"><i class="fas fa-user-shield"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- Transaction Monitoring & Risk Analytics -->
+        <section class="analytics-section">
+            <div class="analytics-grid">
+                <!-- Main Chart -->
+                <div class="chart-card main-chart">
+                    <div class="card-header">
+                        <h3>Transaction Monitoring</h3>
+                        <div class="chart-legend">
+                            <span class="legend-item"><span class="dot blue"></span>Legitimate</span>
+                            <span class="legend-item"><span class="dot orange"></span>Suspicious</span>
+                            <span class="legend-item"><span class="dot red"></span>Blocked</span>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="transactionChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Fraud Types Donut -->
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h3>Fraud Categories</h3>
+                        <button class="more-btn"><i class="fas fa-ellipsis-h"></i></button>
+                    </div>
+                    <div class="chart-container donut-container">
+                        <canvas id="fraudTypesChart"></canvas>
+                        <div class="donut-center">
+                            <span class="donut-value">1,847</span>
+                            <span class="donut-label">Total Cases</span>
+                        </div>
+                    </div>
+                    <div class="fraud-type-list">
+                        <div class="fraud-type-item">
+                            <span class="type-color" style="background: #ff6b35;"></span>
+                            <span class="type-name">Account Takeover</span>
+                            <span class="type-value">34%</span>
+                        </div>
+                        <div class="fraud-type-item">
+                            <span class="type-color" style="background: #3b82f6;"></span>
+                            <span class="type-name">Phishing</span>
+                            <span class="type-value">28%</span>
+                        </div>
+                        <div class="fraud-type-item">
+                            <span class="type-color" style="background: #10b981;"></span>
+                            <span class="type-name">SIM Swap</span>
+                            <span class="type-value">22%</span>
+                        </div>
+                        <div class="fraud-type-item">
+                            <span class="type-color" style="background: #8b5cf6;"></span>
+                            <span class="type-name">Synthetic ID</span>
+                            <span class="type-value">16%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Risk Timeline -->
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h3>Risk Timeline</h3>
+                        <button class="more-btn"><i class="fas fa-ellipsis-h"></i></button>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="riskTimelineChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+        <!-- Live Transactions & OTP Verification -->
+        <section class="transactions-section">
+            <div class="transactions-grid">
+                <!-- Live Transactions Table -->
+                <div class="table-card">
+                    <div class="card-header">
+                        <h3>Live Suspicious Transactions</h3>
+                        <div class="table-actions">
+                            <button class="action-btn"><i class="fas fa-filter"></i> Filter</button>
+                            <button class="action-btn"><i class="fas fa-download"></i> Export</button>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <table class="transactions-table">
+                            <thead>
+                                <tr>
+                                    <th>Transaction ID</th>
+                                    <th>User</th>
+                                    <th>Amount</th>
+                                    <th>Type</th>
+                                    <th>Risk Score</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="transactionsBody">
+                                <!-- Populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- OTP Verification Simulation -->
+                <div class="otp-card">
+                    <div class="card-header">
+                        <h3>OTP Verification Flow</h3>
+                        <span class="simulation-badge"><i class="fas fa-play"></i> Simulation</span>
+                    </div>
+                    <div class="otp-content">
+                        <div class="otp-device">
+                            <div class="device-screen">
+                                <div class="otp-header">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Verify Transaction</span>
+                                </div>
+                                <div class="otp-amount">₹24,999</div>
+                                <div class="otp-merchant">to Flipkart India</div>
+                                <div class="otp-input-group">
+                                    <input type="text" maxlength="1" class="otp-digit" value="">
+                                    <input type="text" maxlength="1" class="otp-digit" value="">
+                                    <input type="text" maxlength="1" class="otp-digit" value="">
+                                    <input type="text" maxlength="1" class="otp-digit" value="">
+                                    <input type="text" maxlength="1" class="otp-digit" value="">
+                                    <input type="text" maxlength="1" class="otp-digit" value="">
+                                </div>
+                                <div class="otp-timer">
+                                    <i class="fas fa-clock"></i>
+                                    <span id="otpTimer">02:00</span>
+                                </div>
+                                <button class="otp-verify-btn" id="verifyOtpBtn">Verify & Pay</button>
+                                <button class="otp-resend">Resend OTP</button>
+                            </div>
+                        </div>
+                        <div class="otp-analysis">
+                            <h4>Real-time Analysis</h4>
+                            <div class="analysis-item">
+                                <div class="analysis-icon green"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="analysis-content">
+                                    <span class="analysis-label">Location Match</span>
+                                    <span class="analysis-value">Mumbai, IN ✓</span>
+                                </div>
+                            </div>
+                            <div class="analysis-item">
+                                <div class="analysis-icon green"><i class="fas fa-mobile-alt"></i></div>
+                                <div class="analysis-content">
+                                    <span class="analysis-label">Device Trust</span>
+                                    <span class="analysis-value">Known Device ✓</span>
+                                </div>
+                            </div>
+                            <div class="analysis-item">
+                                <div class="analysis-icon orange"><i class="fas fa-clock"></i></div>
+                                <div class="analysis-content">
+                                    <span class="analysis-label">Transaction Time</span>
+                                    <span class="analysis-value">Unusual Hour ⚠</span>
+                                </div>
+                            </div>
+                            <div class="analysis-item">
+                                <div class="analysis-icon green"><i class="fas fa-fingerprint"></i></div>
+                                <div class="analysis-content">
+                                    <span class="analysis-label">Biometric</span>
+                                    <span class="analysis-value">Verified ✓</span>
+                                </div>
+                            </div>
+                            <div class="risk-assessment">
+                                <span class="assessment-label">Overall Risk</span>
+                                <div class="assessment-bar">
+                                    <div class="assessment-fill" style="width: 35%"></div>
+                                </div>
+                                <span class="assessment-score">LOW (35/100)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alerts & Incidents -->
+        <section class="alerts-section">
+            <div class="section-header">
+                <h2>Alerts & Incidents</h2>
+                <button class="view-all-btn">View All <i class="fas fa-arrow-right"></i></button>
+            </div>
+            
+            <div class="alerts-grid">
+                <div class="alert-card critical">
+                    <div class="alert-header">
+                        <span class="alert-severity">CRITICAL</span>
+                        <span class="alert-time">2 min ago</span>
+                    </div>
+                    <h4>Mass Account Takeover Attempt</h4>
+                    <p>Detected 47 login attempts from suspicious IP range 192.168.x.x targeting premium accounts.</p>
+                    <div class="alert-actions">
+                        <button class="alert-btn primary">Investigate</button>
+                        <button class="alert-btn secondary">Block IPs</button>
+                    </div>
+                </div>
+                
+                <div class="alert-card high">
+                    <div class="alert-header">
+                        <span class="alert-severity">HIGH</span>
+                        <span class="alert-time">15 min ago</span>
+                    </div>
+                    <h4>Unusual Transaction Pattern</h4>
+                    <p>User ID #847291 initiated 12 high-value transfers in 5 minutes. Total: ₹4.7L</p>
+                    <div class="alert-actions">
+                        <button class="alert-btn primary">Review</button>
+                        <button class="alert-btn secondary">Freeze Account</button>
+                    </div>
+                </div>
+                
+                <div class="alert-card medium">
+                    <div class="alert-header">
+                        <span class="alert-severity">MEDIUM</span>
+                        <span class="alert-time">1 hour ago</span>
+                    </div>
+                    <h4>New Device Login</h4>
+                    <p>Business account accessed from unrecognized device in different geographic region.</p>
+                    <div class="alert-actions">
+                        <button class="alert-btn primary">Verify</button>
+                        <button class="alert-btn secondary">Dismiss</button>
+                    </div>
+                </div>
+                
+                <div class="alert-card low">
+                    <div class="alert-header">
+                        <span class="alert-severity">LOW</span>
+                        <span class="alert-time">3 hours ago</span>
+                    </div>
+                    <h4>Password Reset Request</h4>
+                    <p>Multiple password reset attempts for dormant account. Last active 6 months ago.</p>
+                    <div class="alert-actions">
+                        <button class="alert-btn primary">Monitor</button>
+                        <button class="alert-btn secondary">Dismiss</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================
+   CSS Variables & Base Styles
+   ======================================== */
+:root {
+    /* Primary Colors */
+    --bg-primary: #0a0e1a;
+    --bg-secondary: #0f1629;
+    --bg-tertiary: #151d32;
+    --bg-card: rgba(21, 29, 50, 0.8);
+    
+    /* Accent Colors */
+    --accent-orange: #ff6b35;
+    --accent-orange-glow: rgba(255, 107, 53, 0.3);
+    --accent-blue: #3b82f6;
+    --accent-blue-glow: rgba(59, 130, 246, 0.3);
+    --accent-green: #10b981;
+    --accent-purple: #8b5cf6;
+    --accent-red: #ef4444;
+    --accent-yellow: #f59e0b;
+    
+    /* Text Colors */
+    --text-primary: #ffffff;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    
+    /* Borders & Shadows */
+    --border-color: rgba(255, 255, 255, 0.08);
+    --border-glow: rgba(59, 130, 246, 0.5);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.5);
+    --shadow-glow-blue: 0 0 30px rgba(59, 130, 246, 0.3);
+    --shadow-glow-orange: 0 0 30px rgba(255, 107, 53, 0.3);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #ff6b35, #ff8c42);
+    --gradient-blue: linear-gradient(135deg, #3b82f6, #60a5fa);
+    --gradient-card: linear-gradient(135deg, rgba(21, 29, 50, 0.9), rgba(15, 22, 41, 0.9));
+    --gradient-border: linear-gradient(135deg, rgba(255, 107, 53, 0.5), rgba(59, 130, 246, 0.5));
+    
+    /* Spacing */
+    --sidebar-width: 260px;
+    --header-height: 70px;
+    
+    /* Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-base: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    
+    /* Border Radius */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+}
+
+/* ========================================
+   Reset & Base
+   ======================================== */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+/* ========================================
+   Particles Background
+   ======================================== */
+#particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--accent-blue);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: float 15s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.3;
+    }
+    25% {
+        transform: translateY(-100px) translateX(50px);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateY(-200px) translateX(-30px);
+        opacity: 0.3;
+    }
+    75% {
+        transform: translateY(-100px) translateX(-50px);
+        opacity: 0.6;
+    }
+}
+
+/* ========================================
+   Sidebar Navigation
+   ======================================== */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: var(--sidebar-width);
+    height: 100vh;
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    transition: transform var(--transition-base);
+}
+
+.sidebar-header {
+    padding: 24px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: white;
+    box-shadow: var(--shadow-glow-orange);
+}
+
+.logo-icon.small {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.sidebar-nav {
+    flex: 1;
+    padding: 20px 12px;
+    overflow-y: auto;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+}
+
+.nav-item {
+    margin-bottom: 4px;
+}
+
+.nav-item a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    transition: all var(--transition-fast);
+    position: relative;
+}
+
+.nav-item a i {
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.nav-item a:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+}
+
+.nav-item.active a {
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: var(--shadow-glow-orange);
+}
+
+.nav-item .badge {
+    margin-left: auto;
+    background: var(--accent-red);
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+.sidebar-footer {
+    padding: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent-orange);
+}
+
+.status-indicator {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    width: 10px;
+    height: 10px;
+    background: var(--accent-green);
+    border-radius: 50%;
+    border: 2px solid var(--bg-secondary);
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.user-role {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* ========================================
+   Main Content Area
+   ======================================== */
+.main-content {
+    margin-left: var(--sidebar-width);
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================================
+   Top Navigation
+   ======================================== */
+.top-nav {
+    position: sticky;
+    top: 0;
+    height: var(--header-height);
+    background: rgba(10, 14, 26, 0.9);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    z-index: 50;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 10px 16px;
+    width: 400px;
+    transition: all var(--transition-fast);
+}
+
+.search-container:focus-within {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px var(--accent-blue-glow);
+}
+
+.search-container i {
+    color: var(--text-muted);
+}
+
+.search-container input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
+.search-container input::placeholder {
+    color: var(--text-muted);
+}
+
+.search-container kbd {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-size: 12px;
+    color: var(--text-muted);
+    font-family: inherit;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-btn {
+    width: 40px;
+    height: 40px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+    position: relative;
+}
+
+.nav-btn:hover {
+    background: var(--bg-card);
+    color: var(--text-primary);
+    border-color: var(--accent-blue);
+}
+
+.notification-dot {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 8px;
+    height: 8px;
+    background: var(--accent-red);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+}
+
+/* ========================================
+   Hero Section
+   ======================================== */
+.hero-section {
+    padding: 60px 40px;
+    background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 80%;
+    height: 200%;
+    background: radial-gradient(ellipse, var(--accent-orange-glow), transparent 50%);
+    pointer-events: none;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    left: -20%;
+    width: 60%;
+    height: 150%;
+    background: radial-gradient(ellipse, var(--accent-blue-glow), transparent 50%);
+    pointer-events: none;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 107, 53, 0.15);
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    border-radius: 50px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent-orange);
+    margin-bottom: 20px;
+}
+
+.hero-badge i {
+    font-size: 12px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: var(--text-secondary);
+    max-width: 500px;
+    margin-bottom: 40px;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 40px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-value {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text-primary);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.stat-suffix {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--accent-orange);
+}
+
+.stat-label {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+/* AI Brain Visual */
+.hero-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.ai-brain {
+    position: relative;
+    width: 350px;
+    height: 350px;
+}
+
+.brain-core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    box-shadow: var(--shadow-glow-orange);
+    animation: corePulse 3s infinite ease-in-out;
+}
+
+@keyframes corePulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 0 30px rgba(255, 107, 53, 0.5);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        box-shadow: 0 0 60px rgba(255, 107, 53, 0.8);
+    }
+}
+
+.brain-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    animation: ringRotate 20s linear infinite;
+}
+
+.ring-1 {
+    width: 160px;
+    height: 160px;
+    margin: -80px 0 0 -80px;
+    border-top-color: var(--accent-orange);
+    border-right-color: var(--accent-orange);
+    animation-duration: 15s;
+}
+
+.ring-2 {
+    width: 240px;
+    height: 240px;
+    margin: -120px 0 0 -120px;
+    border-top-color: var(--accent-blue);
+    border-left-color: var(--accent-blue);
+    animation-duration: 20s;
+    animation-direction: reverse;
+}
+
+.ring-3 {
+    width: 320px;
+    height: 320px;
+    margin: -160px 0 0 -160px;
+    border-bottom-color: var(--accent-purple);
+    border-right-color: var(--accent-purple);
+    animation-duration: 25s;
+}
+
+@keyframes ringRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.data-node {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: var(--accent-blue);
+    animation: nodeFloat 4s infinite ease-in-out;
+    backdrop-filter: blur(10px);
+}
+
+.node-1 { top: 10%; left: 50%; transform: translateX(-50%); animation-delay: 0s; }
+.node-2 { top: 30%; right: 5%; animation-delay: 0.5s; }
+.node-3 { bottom: 30%; right: 5%; animation-delay: 1s; }
+.node-4 { bottom: 10%; left: 50%; transform: translateX(-50%); animation-delay: 1.5s; }
+.node-5 { bottom: 30%; left: 5%; animation-delay: 2s; }
+.node-6 { top: 30%; left: 5%; animation-delay: 2.5s; }
+
+@keyframes nodeFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.node-1, .node-4 {
+    animation-name: nodeFloatX;
+}
+
+@keyframes nodeFloatX {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-10px); }
+}
+
+/* ========================================
+   Section Styles
+   ======================================== */
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.section-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.live-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--accent-green);
+    font-weight: 500;
+}
+
+.live-indicator .pulse {
+    width: 8px;
+    height: 8px;
+    background: var(--accent-green);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.time-filter {
+    display: flex;
+    gap: 8px;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 500;
+    transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+    border-color: var(--accent-blue);
+    color: var(--text-primary);
+}
+
+.filter-btn.active {
+    background: var(--gradient-primary);
+    border-color: transparent;
+    color: white;
+}
+
+/* ========================================
+   Overview Cards
+   ======================================== */
+.overview-section {
+    padding: 40px;
+}
+
+.overview-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.overview-card {
+    background: var(--gradient-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-base);
+    backdrop-filter: blur(10px);
+}
+
+.overview-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.overview-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: var(--shadow-lg);
+}
+
+.overview-card:hover::before {
+    opacity: 1;
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.card-icon.blue {
+    background: rgba(59, 130, 246, 0.15);
+    color: var(--accent-blue);
+}
+
+.card-icon.orange {
+    background: rgba(255, 107, 53, 0.15);
+    color: var(--accent-orange);
+}
+
+.card-icon.green {
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--accent-green);
+}
+
+.card-icon.purple {
+    background: rgba(139, 92, 246, 0.15);
+    color: var(--accent-purple);
+}
+
+.card-content {
+    flex: 1;
+}
+
+.card-label {
+    display: block;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.card-value {
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-primary);
+}
+
+.card-value.currency {
+    font-size: 24px;
+}
+
+.card-trend {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 6px;
+    margin-top: 8px;
+}
+
+.card-trend.positive {
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--accent-green);
+}
+
+.card-trend.negative {
+    background: rgba(239, 68, 68, 0.15);
+    color: var(--accent-red);
+}
+
+.card-trend.neutral {
+    background: rgba(148, 163, 184, 0.15);
+    color: var(--text-secondary);
+}
+
+.card-chart {
+    width: 100%;
+    height: 60px;
+}
+
+.card-chart canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Risk Gauge */
+.risk-gauge {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.risk-gauge svg {
+    width: 120px;
+    height: 60px;
+}
+
+.gauge-bg {
+    fill: none;
+    stroke: var(--bg-tertiary);
+    stroke-width: 8;
+    stroke-linecap: round;
+}
+
+.gauge-fill {
+    fill: none;
+    stroke: url(#gaugeGradient);
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-dasharray: 126;
+    stroke-dashoffset: 96;
+    transition: stroke-dashoffset 1s ease;
+}
+
+.gauge-dot {
+    fill: var(--accent-green);
+    filter: drop-shadow(0 0 8px var(--accent-green));
+}
+
+/* ========================================
+   Analytics Section
+   ======================================== */
+.analytics-section {
+    padding: 0 40px 40px;
+}
+
+.analytics-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 24px;
+}
+
+.chart-card {
+    background: var(--gradient-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    backdrop-filter: blur(10px);
+}
+
+.chart-card.main-chart {
+    grid-row: span 2;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.card-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.chart-legend {
+    display: flex;
+    gap: 16px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.legend-item .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.legend-item .dot.blue { background: var(--accent-blue); }
+.legend-item .dot.orange { background: var(--accent-orange); }
+.legend-item .dot.red { background: var(--accent-red); }
+
+.more-btn {
+    width: 32px;
+    height: 32px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+}
+
+.more-btn:hover {
+    border-color: var(--accent-blue);
+    color: var(--text-primary);
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+}
+
+.chart-container.donut-container {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.donut-center {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.donut-value {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.donut-label {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.fraud-type-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.fraud-type-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.type-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 4px;
+}
+
+.type-name {
+    flex: 1;
+    color: var(--text-secondary);
+}
+
+.type-value {
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* ========================================
+   Pipeline Section
+   ======================================== */
+.pipeline-section {
+    padding: 40px;
+    background: var(--bg-secondary);
+}
+
+.pipeline-flow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px 0;
+}
+
+.pipeline-step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.step-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--gradient-card);
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--accent-blue);
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 2;
+    transition: all var(--transition-base);
+}
+
+.pipeline-step:hover .step-icon {
+    border-color: var(--accent-orange);
+    color: var(--accent-orange);
+    box-shadow: var(--shadow-glow-orange);
+    transform: scale(1.1);
+}
+
+.step-content h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.step-content p {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.step-metric {
+    display: inline-block;
+    background: rgba(59, 130, 246, 0.15);
+    color: var(--accent-blue);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.step-connector {
+    position: absolute;
+    top: 35px;
+    left: calc(50% + 40px);
+    width: calc(100% - 40px);
+    height: 2px;
+    background: var(--border-color);
+    z-index: 1;
+}
+
+.pipeline-step.final .step-connector {
+    display: none;
+}
+
+.data-flow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 30%;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+    animation: dataFlow 2s infinite linear;
+}
+
+@keyframes dataFlow {
+    0% {
+        left: -30%;
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+.pipeline-step.final .step-icon {
+    background: var(--gradient-primary);
+    border-color: var(--accent-orange);
+    color: white;
+}
+
+/* ========================================
+   Transactions Section
+   ======================================== */
+.transactions-section {
+    padding: 40px;
+}
+
+.transactions-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+}
+
+.table-card {
+    background: var(--gradient-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    backdrop-filter: blur(10px);
+}
+
+.table-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 500;
+    transition: all var(--transition-fast);
+}
+
+.action-btn:hover {
+    border-color: var(--accent-blue);
+    color: var(--text-primary);
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 16px;
+}
+
+.transactions-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.transactions-table th,
+.transactions-table td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.transactions-table th {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.transactions-table td {
+    font-size: 13px;
+}
+
+.transactions-table tbody tr {
+    transition: background var(--transition-fast);
+}
+
+.transactions-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.tx-id {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--accent-blue);
+}
+
+.tx-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tx-user img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.tx-amount {
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.tx-type {
+    display: inline-block;
+    padding: 4px 10px;
+    background: rgba(59, 130, 246, 0.15);
+    color: var(--accent-blue);
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+.risk-score {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.risk-bar {
+    width: 60px;
+    height: 6px;
+    background: var(--bg-tertiary);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.risk-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.5s ease;
+}
+
+.risk-fill.low { background: var(--accent-green); }
+.risk-fill.medium { background: var(--accent-yellow); }
+.risk-fill.high { background: var(--accent-orange); }
+.risk-fill.critical { background: var(--accent-red); }
+
+.risk-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+.status-badge.approved {
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--accent-green);
+}
+
+.status-badge.pending {
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--accent-yellow);
+}
+
+.status-badge.blocked {
+    background: rgba(239, 68, 68, 0.15);
+    color: var(--accent-red);
+}
+
+.status-badge.review {
+    background: rgba(139, 92, 246, 0.15);
+    color: var(--accent-purple);
+}
+
+.tx-action-btn {
+    width: 28px;
+    height: 28px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    transition: all var(--transition-fast);
+}
+
+.tx-action-btn:hover {
+    background: var(--accent-blue);
+    border-color: var(--accent-blue);
+    color: white;
+}
+
+/* ========================================
+   OTP Card
+   ======================================== */
+.otp-card {
+    background: var(--gradient-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    backdrop-filter: blur(10px);
+}
+
+.simulation-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: var(--accent-green);
+    font-weight: 500;
+}
+
+.otp-content {
+    display: flex;
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.otp-device {
+    flex: 1;
+}
+
+.device-screen {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 24px;
+    text-align: center;
+}
+
+.otp-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    color: var(--accent-blue);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.otp-amount {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 4px;
+}
+
+.otp-merchant {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+.otp-input-group {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.otp-digit {
+    width: 42px;
+    height: 50px;
+    background: var(--bg-tertiary);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-primary);
+    transition: all var(--transition-fast);
+}
+
+.otp-digit:focus {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px var(--accent-blue-glow);
+    outline: none;
+}
+
+.otp-digit.filled {
+    border-color: var(--accent-green);
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.otp-timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.otp-verify-btn {
+    width: 100%;
+    padding: 14px;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-md);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    transition: all var(--transition-fast);
+}
+
+.otp-verify-btn:hover {
+    box-shadow: var(--shadow-glow-orange);
+    transform: translateY(-2px);
+}
+
+.otp-verify-btn.success {
+    background: var(--accent-green);
+}
+
+.otp-resend {
+    background: transparent;
+    color: var(--accent-blue);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.otp-resend:hover {
+    text-decoration: underline;
+}
+
+.otp-analysis {
+    flex: 1;
+}
+
+.otp-analysis h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.analysis-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-md);
+    margin-bottom: 10px;
+}
+
+.analysis-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.analysis-icon.green {
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--accent-green);
+}
+
+.analysis-icon.orange {
+    background: rgba(255, 107, 53, 0.15);
+    color: var(--accent-orange);
+}
+
+.analysis-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.analysis-label {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.analysis-value {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.risk-assessment {
+    margin-top: 20px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-md);
+}
+
+.assessment-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.assessment-bar {
+    height: 8px;
+    background: var(--bg-tertiary);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.assessment-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-green), var(--accent-yellow));
+    border-radius: 4px;
+    transition: width 1s ease;
+}
+
+.assessment-score {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent-green);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* ========================================
+   Alerts Section
+   ======================================== */
+.alerts-section {
+    padding: 40px;
+    background: var(--bg-secondary);
+}
+
+.view-all-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 500;
+    transition: all var(--transition-fast);
+}
+
+.view-all-btn:hover {
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+}
+
+.alerts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.alert-card {
+    background: var(--gradient-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-base);
+}
+
+.alert-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+}
+
+.alert-card.critical::before { background: var(--accent-red); }
+.alert-card.high::before { background: var(--accent-orange); }
+.alert-card.medium::before { background: var(--accent-yellow); }
+.alert-card.low::before { background: var(--accent-blue); }
+
+.alert-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.alert-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.alert-severity {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.alert-card.critical .alert-severity {
+    background: rgba(239, 68, 68, 0.2);
+    color: var(--accent-red);
+}
+
+.alert-card.high .alert-severity {
+    background: rgba(255, 107, 53, 0.2);
+    color: var(--accent-orange);
+}
+
+.alert-card.medium .alert-severity {
+    background: rgba(245, 158, 11, 0.2);
+    color: var(--accent-yellow);
+}
+
+.alert-card.low .alert-severity {
+    background: rgba(59, 130, 246, 0.2);
+    color: var(--accent-blue);
+}
+
+.alert-time {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.alert-card h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.alert-card p {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.alert-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.alert-btn {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+    font-weight: 600;
+    transition: all var(--transition-fast);
+}
+
+.alert-btn.primary {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+.alert-btn.primary:hover {
+    box-shadow: var(--shadow-glow-orange);
+}
+
+.alert-btn.secondary {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.alert-btn.secondary:hover {
+    border-color: var(--text-secondary);
+    color: var(--text-primary);
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+.dashboard-footer {
+    padding: 60px 40px 30px;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1fr;
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+.footer-brand p {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 12px;
+    max-width: 250px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 60px;
+}
+
+.link-group h5 {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+}
+
+.link-group a {
+    display: block;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    transition: color var(--transition-fast);
+}
+
+.link-group a:hover {
+    color: var(--accent-orange);
+}
+
+.footer-status {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+.status-card {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: var(--radius-md);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--accent-green);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.status-dot.green { background: var(--accent-green); }
+
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-links a {
+    width: 36px;
+    height: 36px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 14px;
+    transition: all var(--transition-fast);
+}
+
+.social-links a:hover {
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-color);
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.footer-bottom i {
+    color: var(--accent-red);
+    margin: 0 4px;
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+@media (max-width: 1400px) {
+    .overview-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .analytics-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .chart-card.main-chart {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    
+    .alerts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .hero-text p {
+        max-width: 100%;
+    }
+    
+    .hero-stats {
+        justify-content: center;
+    }
+    
+    .hero-visual {
+        display: none;
+    }
+    
+    .transactions-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .footer-status {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .sidebar.open {
+        transform: translateX(0);
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+    
+    .pipeline-flow {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .pipeline-step {
+        flex: 0 0 calc(33.333% - 20px);
+        margin-bottom: 30px;
+    }
+    
+    .step-connector {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .overview-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .analytics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .chart-card.main-chart {
+        grid-column: span 1;
+    }
+    
+    .alerts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .search-container {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .hero-text h1 {
+        font-size: 32px;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .otp-content {
+        flex-direction: column;
+    }
+    
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .top-nav {
+        padding: 0 16px;
+    }
+    
+    .hero-section,
+    .overview-section,
+    .analytics-section,
+    .pipeline-section,
+    .transactions-section,
+    .alerts-section,
+    .dashboard-footer {
+        padding: 24px 16px;
+    }
+    
+    .search-container kbd {
+        display: none;
+    }
+    
+    .pipeline-step {
+        flex: 0 0 100%;
+    }
+}
+
+/* ========================================
+   Animations & Effects
+   ======================================== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scale-in {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: scaleIn 0.5s ease forwards;
+}
+
+@keyframes scaleIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Glow effects */
+.glow-blue {
+    box-shadow: var(--shadow-glow-blue);
+}
+
+.glow-orange {
+    box-shadow: var(--shadow-glow-orange);
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-tertiary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
